@@ -3,6 +3,7 @@ import "./shop.css"
 // import ProductList from "./productList";
 import { products } from "../../api/ProductList";
 import Product from "./product";
+import { Fragment } from "react";
 
 const Shop = () => {
 
@@ -15,7 +16,9 @@ const Shop = () => {
       <div className="products">
         {
           products.map((p) => (
-            <Product data={p}/>
+            <Fragment key={p.id}>
+              <Product data={p} />
+            </Fragment>
           ))
         }
       </div>
