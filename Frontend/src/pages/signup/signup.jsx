@@ -8,7 +8,7 @@ const SignUpPage = () => {
     <div className="signupWrapper">
       <h2>Join us</h2>
       <h5>Create your personal account</h5>
-      <form action="/home">
+      <form action="/">
         <div>
           <label>Username</label><br />
           <input type="text" name="username" required />

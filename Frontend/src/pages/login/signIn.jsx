@@ -6,7 +6,7 @@ const SignInPage = () => {
   return (
       <div className="loginWrapper">
           <h2>Sign in with us</h2>
-          <form action="/home">
+          <form action="/">
               <div>
                   <label>Username</label>
                   <br/>
