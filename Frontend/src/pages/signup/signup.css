@@ -1,0 +1,21 @@
+.signupWrapper {
+  text-align: center;
+}
+
+h2 {
+  margin-top: 100px;
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+
+#checkbox {
+  width: 1rem
+}
+
+form span {
+  font-size: .8rem
+}
+
+#reset_pass_lbl {
+  float: left
+}

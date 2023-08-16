@@ -1,0 +1,57 @@
+.loginWrapper {
+  text-align: center;
+}
+
+h2 {
+  margin-top: 100px;
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+
+form {
+  display: inline-block;
+  background: #f3f3f3;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  padding: 2rem;
+  margin: 2rem 0 1rem 0
+}
+
+form div {
+  margin-bottom: 10px;
+}
+
+form label {
+  float: left;
+  font-size: .9rem;
+  margin: 10px;
+}
+
+input {
+  width: 15rem;
+  padding: .3rem;
+  border-radius: 5px;
+  outline: none;
+  border: none
+}
+
+#sub_btn {
+  display: block;
+  width: 100%;
+  padding: .3rem;
+  border: none;
+  background: #222;
+  color: #fff;
+  border-radius: 3px;
+  margin-top: 10px;
+  transition: all .2s
+}
+
+#sub_btn:hover {
+  background: #5d5d5d;
+}
+
+footer p {
+  margin: 0;
+  font-size: .9rem
+}
