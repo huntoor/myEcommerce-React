@@ -29,8 +29,9 @@ const Cart = () => {
                   <CartItem data={p} />
                 </Fragment>
               )
+            } else {
+              return;
             }
-            return <></>;
           })
         }
       </div>        
