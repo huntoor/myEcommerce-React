@@ -1,10 +1,9 @@
 import './checkout.css';
 import giveMe from './giveMe.jpg';
 
-import { useState, useEffect, Fragment } from 'react';
+import { useState, Fragment } from 'react';
 
 function CheckoutPage() {
-  // let isCreditCard = false;
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [address, setAddress] = useState('');

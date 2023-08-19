@@ -6,7 +6,6 @@ const bodyParser = require('body-parser');
 const app = express();
 
 const PORT = 3001;
-console.log(process.env.DEV_PORT);
 // const PORT = process.env.DEV_PORT;
 
 // Enable Cross-Origin Resource Sharing (CORS)
