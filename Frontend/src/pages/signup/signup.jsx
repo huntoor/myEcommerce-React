@@ -19,7 +19,7 @@ const SignUpPage = () => {
     Axios.post('http://localhost:3001/api/create', { username, email, password }).then((res) => {
       alert("loggedin");
       isSignedUp = true;
-      navigate("/signin");
+      navigate("/login");
     }).catch((error) => {
       alert(`${error}: username already exists`);
     });

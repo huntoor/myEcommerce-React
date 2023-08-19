@@ -1,0 +1,32 @@
+.checkout-form {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+select {
+  width: 100%;
+  padding: 10px 5px;
+}
+
+img {
+  width: 100%;
+}

@@ -40,7 +40,7 @@ const Cart = () => {
         <div className="checkout">
           <p>Subtotal: ${cartItemsAmount.toFixed(2)}</p>
           <button onClick={() => navigate("/")}>Continue Shopping</button>
-          <button>Checkout</button>
+          <button onClick={() => navigate("/checkout")}>Checkout</button>
         </div>
         :
         <>
