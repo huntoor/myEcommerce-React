@@ -30,7 +30,7 @@ const Cart = () => {
                 </Fragment>
               )
             } else {
-              return;
+              return ;
             }
           })
         }

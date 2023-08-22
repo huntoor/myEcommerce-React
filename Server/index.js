@@ -17,7 +17,7 @@ app.use(bodyParser.json());
 
 // Route to get all users
 app.get("/api/get", (req, res) => {
-    query("SELECT * FROM posts", (err, result) => {
+    query("SELECT * FROM myecommerce.users", (err, result) => {
         if (err) {
             console.log(err)
         }
@@ -26,11 +26,12 @@ app.get("/api/get", (req, res) => {
     );
 });
 
-// Route to get one post
+// Route to get one user
 app.get("/api/getFromId/:id", (req, res) => {
 
     const id = req.params.id;
-    query("SELECT * FROM posts WHERE id = ?", id, (err, result) => {
+
+    query("SELECT * FROM myecommerce.users WHERE id = ?", id, (err, result) => {
         if (err) {
             console.log(err);
         }
@@ -86,24 +87,11 @@ app.post('/api/login', (req, res) => {
     });
 });
 
-// Route for like
-app.post('/api/like/:id', (req, res) => {
-
-    const id = req.params.id;
-    query("UPDATE posts SET likes = likes + 1 WHERE id = ?", id, (err, result) => {
-        if (err) {
-            console.log(err)
-        }
-        console.log(result)
-    }
-    );
-});
-
-// Route to delete a post
+// Route to delete a user
 app.delete('/api/delete/:id', (req, res) => {
     const id = req.params.id;
 
-    query("DELETE FROM posts WHERE id= ?", id, (err, result) => {
+    query("DELETE FROM myecommerce.users WHERE id= ?", id, (err, result) => {
         if (err) {
             console.log(err)
         }
