@@ -73,17 +73,18 @@ app.post('/api/login', (req, res) => {
         if (err) {
             console.error('Error executing MySQL query:', err);
             res.status(500).json({ error: 'Internal server error' });
-            return; 
-          }
-      
-          // Check if user exists and password is correct
-          if (resutls.length === 0) {
+            return;
+        }
+
+        // Check if user exists and password is correct
+        if (resutls.length === 0) {
             res.status(401).json({ error: 'Invalid email or password' });
             return;
-          }
-      
-          // User login successful
-          res.status(200).json({ message: 'Login successful' });
+        }
+
+        const token = username;
+        // User login successful
+        res.status(200).json({ message: 'Login successful', token, username, resutls });
     });
 });
 
@@ -91,12 +92,30 @@ app.post('/api/login', (req, res) => {
 app.delete('/api/delete/:id', (req, res) => {
     const id = req.params.id;
 
-    query("DELETE FROM myecommerce.users WHERE id= ?", id, (err, result) => {
+    db.query("DELETE FROM myecommerce.users WHERE id= ?", id, (err, result) => {
         if (err) {
             console.log(err)
         }
     })
 });
+
+// Route to add add orders to users
+app.post('/api/addOrder', (req, res) => {
+    const {userID, itemAmount, cartItemID } = req.body;
+
+    const myQuery = "INSERT INTO myecommerce.orders (product_id, user_id, total_amount) VALUES (?,?,?)"
+
+    db.query(myQuery, [ cartItemID, userID, itemAmount ], (err, result) => {
+        if (err) {
+            console.error('Error executing MySQL query:', err);
+            res.status(500).json({ error: 'Internal server error', haha: err });
+            return;
+        }
+
+        // User login successful
+        res.status(200).json({ message: 'Added to DB Succ' });
+    });
+})
 
 app.listen(PORT, () => {
     console.log(`Server is running on ${PORT}`)

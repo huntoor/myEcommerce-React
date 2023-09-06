@@ -15,7 +15,8 @@
 }
 
 .links a,
-.login a {
+.login a,
+.username h1 {
   text-decoration: none;
   color: white;
   padding: 15px;

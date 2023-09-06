@@ -3,7 +3,7 @@ import "./navbar.css";
 import { Link } from "react-router-dom";
 import { ShoppingCart } from "phosphor-react";
 
-const Navbar = () => {
+const Navbar = (props) => {
   return (
     <div className="navbar">
       <div className="links">
@@ -14,9 +14,16 @@ const Navbar = () => {
           </Link>
         </div>
       </div>
-      <div className="login">
-        <Link to="/login">Log in</Link>
-      </div>
+      {
+        props.isLoggedin ?
+        <div className="username">
+          <h1>Welcome, {props.username}</h1>
+        </div>
+        :
+        <div className="login">
+          <Link to="/login">Log in</Link>
+        </div>
+      }
     </div>
   );
 }

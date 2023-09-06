@@ -51,3 +51,18 @@
   color: white;
   cursor: pointer;
 }
+
+.singout button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.singout button:hover {
+  background-color: rgba(255, 0, 0, 0.685);
+}
